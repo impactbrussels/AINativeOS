@@ -20,11 +20,13 @@ endorsement in either direction.
   The five building blocks of a loop, and the discipline of the state file (the agent forgets, the
   repo remembers), follow Osmani's long-form writing. `docs/LOOP-ENGINEERING.md` and the
   `design-a-loop` skill are our reading of it.
-- **Geoffrey Huntley, the "Ralph" loop.** The named failure mode where a loop exits early and fails
-  quietly while still spending, which we call the Ralph Wiggum loop in the Dictionary, was documented
-  and named by Huntley.
-- **Boris Cherny and the Claude Code team.** The framing of loops as the step after agents, and much
-  of the practical harness this OS assumes, comes from the people building the tools.
+- **[Geoffrey Huntley](https://ghuntley.com), the "Ralph" loop.** The named failure mode where a loop
+  exits early and fails quietly while still spending, which we call the Ralph Wiggum loop in the
+  Dictionary, was documented and named by Huntley in
+  [how-to-ralph-wiggum](https://github.com/ghuntley/how-to-ralph-wiggum).
+- **[Boris Cherny](https://x.com/bcherny) and the Claude Code team.** The framing of loops as the step
+  after agents, and much of the practical harness this OS assumes, comes from the people building the
+  tools.
 
 ## Related open-source projects
 
