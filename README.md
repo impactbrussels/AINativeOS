@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.png" alt="AI-Native OS: building is no longer the moat. The open operating system for building an AI-native company." width="100%">
+
 # AI-Native OS
 
 ### The open operating system for building an AI-native company.

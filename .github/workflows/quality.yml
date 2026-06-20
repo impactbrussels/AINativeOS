@@ -1,0 +1,25 @@
+# House style: one objective check, em-dashes only, so it has zero false positives.
+# The full voice rules (British spelling, banned words, no en-dashes in prose) live in
+# docs/VOICE-GUIDE.md and are reviewed by a human on every PR.
+name: House style
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  no-em-dashes:
+    name: No em-dashes in Markdown
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Fail on any em-dash (U+2014) in tracked .md or .mdc files
+        run: |
+          if grep -rlP '\x{2014}' --include='*.md' --include='*.mdc' .; then
+            echo 'Em-dash (U+2014) found in the files listed above. House style: none allowed.'
+            echo 'Use commas, full stops, or colons; see docs/VOICE-GUIDE.md.'
+            exit 1
+          fi
+          echo 'No em-dashes found.'

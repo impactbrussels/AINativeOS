@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Read the Handbook first
+    url: https://github.com/impactbrussels/AINativeOS#readme
+    about: The README is the front door. Skim the build arc and run start-here before filing.
+  - name: Impact Brussels
+    url: https://impact.brussels
+    about: Who builds AI-Native OS, and how to reach the team behind it.
