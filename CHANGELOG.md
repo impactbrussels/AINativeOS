@@ -52,7 +52,8 @@ The complete stack: every stage of the build arc is now covered, and every skill
 ### Fixed
 
 - The content licence (`LICENSE-CONTENT`) was corrected: it had carried "FounderOS" text and pointed at
-  the wrong repository.
+  the wrong repository. It now contains the full official CC BY 4.0 legal code, so GitHub identifies the
+  content licence as CC-BY-4.0 rather than "Unknown".
 - The GitHub organisation slug was standardised to `impactbrussels/AINativeOS` (lowercase, no hyphen).
 - A repo-wide pass removed every em-dash and American spelling, and made all internal links and anchors
   resolve.
