@@ -1,0 +1,28 @@
+{
+  "name": "ai-native-os",
+  "version": "0.1.0",
+  "description": "The open operating system for building an AI-native company - a Handbook, a Dictionary, and theme-agnostic AI skills, flows, loops, and advisor agents for the whole arc of making intelligence the core of a product and org.",
+  "homepage": "https://github.com/impactbrussels/AINativeOS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/impactbrussels/AINativeOS.git"
+  },
+  "author": "Adam M. Adamek (Impact Brussels ASBL) <hello@impact.brussels> (https://impact.brussels)",
+  "license": "Apache-2.0 AND CC-BY-4.0",
+  "keywords": [
+    "ai-native",
+    "agentic-coding",
+    "startup",
+    "founder",
+    "deeptech",
+    "claude-code",
+    "codex",
+    "cursor",
+    "gemini-cli",
+    "ai-skills",
+    "prompts"
+  ],
+  "scripts": {
+    "lint": "bash scripts/lint-skills.sh"
+  }
+}

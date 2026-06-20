@@ -1,0 +1,17 @@
+{
+  "name": "ai-native-os",
+  "owner": {
+    "name": "Adam M. Adamek (Impact Brussels ASBL)",
+    "url": "https://impact.brussels"
+  },
+  "plugins": [
+    {
+      "name": "ai-native-os",
+      "source": "./",
+      "description": "The open operating system for building an AI-native company - Handbook, Dictionary, skills, flows, loops, and advisor agents.",
+      "version": "0.1.0",
+      "license": "Apache-2.0 AND CC-BY-4.0",
+      "category": "productivity"
+    }
+  ]
+}
