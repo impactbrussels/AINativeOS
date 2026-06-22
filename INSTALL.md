@@ -5,7 +5,13 @@ works with **no install at all** if you do not code. Pick the path that fits you
 
 ## Fastest path
 
-Clone the repo, run the installer, then ask your agent to use a skill:
+One command installs the skills into your agent (Claude Code, Cursor, Codex, and more):
+
+```bash
+npx skills add impactbrussels/AINativeOS
+```
+
+Or clone the repo and run the installer:
 
 ```bash
 git clone https://github.com/impactbrussels/AINativeOS.git

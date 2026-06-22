@@ -9,8 +9,8 @@ abstract: >-
   the system, agentic building, evaluation and safety, shipping a Minimum Viable Agent, GEO-driven
   growth, and data moats - across Claude Code, Codex, Cursor, and Gemini CLI.
 type: software
-version: "0.2.0"
-date-released: "2026-06-20"
+version: "0.3.0"
+date-released: "2026-06-22"
 license:
   - Apache-2.0
   - CC-BY-4.0

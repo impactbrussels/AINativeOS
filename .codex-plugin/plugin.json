@@ -1,9 +1,17 @@
 {
   "name": "ai-native-os",
+  "version": "0.3.0",
+  "license": "Apache-2.0 AND CC-BY-4.0",
   "description": "The open operating system for building an AI-native company: Handbook, Dictionary, skills, flows, loops, and advisor agents. Codex reads AGENTS.md as the master instructions; skills live in skills/. Theme-agnostic.",
-  "version": "0.2.0",
   "author": "Adam M. Adamek (Impact Brussels ASBL)",
   "homepage": "https://github.com/impactbrussels/AINativeOS",
-  "license": "Apache-2.0 AND CC-BY-4.0",
-  "instructions": "AGENTS.md"
+  "skills": "./skills/",
+  "instructions": "./AGENTS.md",
+  "interface": {
+    "displayName": "AI-Native OS",
+    "shortDescription": "Frame, architect, build, trust, ship, grow, defend an AI-native company",
+    "category": "Productivity",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "brandColor": "#7C3AED"
+  }
 }

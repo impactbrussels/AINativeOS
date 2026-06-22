@@ -11,16 +11,20 @@
 *Everyone can bolt a chatbot onto a product. Almost no one architects a company where intelligence
 is the core, where every interaction makes the system smarter and the thing falls apart without it.
 AI-Native OS is the whole method, open and runnable: a 15-chapter Handbook, a 90-entry Dictionary,
-and 24 AI skills that take you from a vague idea to a company with a real data moat.*
+and 25 AI skills that take you from a vague idea to a company with a real data moat.*
 
 [Handbook](#the-handbook) · [Dictionary](#the-dictionary) · [Skills](#the-skills) ·
 [Install](#install) · [Non-coders start here](#not-a-coder) · [Contribute](#contribute)
 
-![Status](https://img.shields.io/badge/status-v0.2.0-blue) ![Handbook](https://img.shields.io/badge/handbook-15_chapters-success) ![Skills](https://img.shields.io/badge/skills-24-success) ![Content License](https://img.shields.io/badge/content-CC--BY--4.0-green) ![Code License](https://img.shields.io/badge/code-Apache--2.0-green) ![Platforms](https://img.shields.io/badge/Claude%20Code%20·%20Codex%20·%20Cursor%20·%20Gemini%20·%20no--code-supported-8A2BE2)
+![Status](https://img.shields.io/badge/status-v0.3.0-blue) ![Handbook](https://img.shields.io/badge/handbook-15_chapters-success) ![Skills](https://img.shields.io/badge/skills-25-success) ![Content License](https://img.shields.io/badge/content-CC--BY--4.0-green) ![Code License](https://img.shields.io/badge/code-Apache--2.0-green) ![Platforms](https://img.shields.io/badge/Claude%20Code%20·%20Codex%20·%20Cursor%20·%20Gemini%20·%20no--code-supported-8A2BE2)
 
 </div>
 
 ---
+
+> **Part of a family.** AI-Native OS has a sibling for the general founder journey:
+> [FounderOS](https://github.com/impactbrussels/FounderOS). Same author, same licence. Use FounderOS
+> for idea-to-operations; use AI-Native OS when your product itself is the AI.
 
 ## Why this exists
 
@@ -68,12 +72,12 @@ AI-Native OS has three layers that reinforce each other:
 |-------|-----------|-------|
 | **Handbook** | *Load-Bearing*, the 15-chapter method (00 plus 14), long-form, ~33,800 words, with named case studies (NotCo, Foodpairing, OpenEvidence, Nuritas, BeeWise, Impact Brussels…). | [`handbook/`](handbook/) |
 | **Dictionary** | The AI-native vocabulary: 90 terms in 7 categories, each defined the way Matt Pocock defines them: precise, opinionated, with usage and what to avoid. | [`dictionary/`](dictionary/) |
-| **Skills** | 24 skills, one founder job each, every one a one-stop shop with its own `references/` folder. Runnable on Claude Code / Codex / Cursor / Gemini, or copy-pasted into any chatbot. | [`skills/`](skills/) |
+| **Skills** | 25 skills, one founder job each, every one a one-stop shop with its own `references/` folder. Runnable on Claude Code / Codex / Cursor / Gemini, or copy-pasted into any chatbot. | [`skills/`](skills/) |
 
 Plus **5 flows** (multi-step workflows with checkpoints), **5 scheduled loops** with a
 loop-engineering subsystem ([`docs/LOOP-ENGINEERING.md`](docs/LOOP-ENGINEERING.md) and the
 [`design-a-loop`](skills/design-a-loop/SKILL.md) skill), **6 advisor agents** (a structured devil's
-advocate, a safety judge, a clinical reviewer, a regulatory proxy, and more), **25 copy-paste
+advocate, a safety judge, a clinical reviewer, a regulatory proxy, and more), **26 copy-paste
 prompts** ([`prompts/`](prompts/README.md)), **masterfiles** (drop-in system context), and a living
 **knowledge base**.
 
@@ -113,7 +117,7 @@ skills link into it, so the vocabulary is one coherent graph rather than scatter
 
 ## The skills
 
-All 24 skills are shipped. Each is one job, produces a real artefact, carries its own `references/`
+All 25 skills are shipped. Each is one job, produces a real artefact, carries its own `references/`
 folder so it is a one-stop shop, and ends with a copy-paste prompt for non-coders.
 
 | Stage | Skills |
@@ -121,7 +125,7 @@ folder so it is a one-stop shop, and ends with a copy-paste prompt for non-coder
 | **Frame** | `frame-the-hypothesis` · `map-the-terrain` · `customer-discovery-that-doesnt-lie` · `hypothesis-mining` |
 | **Architect** | `architect-before-code` · `cognitive-architecture-review` |
 | **Build** | `agentic-build-loop` · `pay-down-agentic-debt` · `write-the-claude-md` · `self-healing-fallbacks` |
-| **Trust** | `eval-and-safety-harness` · `red-team-the-agent` · `compliance-readiness` |
+| **Trust** | `eval-and-safety-harness` · `red-team-the-agent` · `secure-the-connectors` · `compliance-readiness` |
 | **Ship** | `design-the-mva` |
 | **Grow** | `measure-ai-native-pmf` · `geo-content` · `share-of-model-audit` · `ai-assisted-sales` |
 | **Defend** | `gateway-agent-ops` · `moat-strategy` |
@@ -137,7 +141,12 @@ translations, each a ready contribution slot.
 
 ## Install
 
-**Claude Code**, clone into your skills path (or add as a plugin):
+**Fastest (any agent)**, one command, no clone, works across Claude Code, Cursor, Codex and more:
+```bash
+npx skills add impactbrussels/AINativeOS
+```
+
+**Claude Code**, or clone into your skills path (or add as a plugin):
 ```bash
 git clone https://github.com/impactbrussels/AINativeOS.git
 cd AINativeOS
@@ -153,7 +162,7 @@ Cursor reads [.cursor/rules/ai-native-os.mdc](.cursor/rules/ai-native-os.mdc), G
 ## Not a coder?
 
 You do not need any developer tools. Every skill has a **copy-paste prompt** at the bottom, and the
-[Prompt Library](prompts/README.md) collects all 25 as standalone files. Pick your stage, copy the
+[Prompt Library](prompts/README.md) collects all 26 as standalone files. Pick your stage, copy the
 block, paste it into Claude.ai / ChatGPT / Gemini (or into a no-code builder like **Lovable, Bolt,
 v0, or Replit**), fill the `[PLACEHOLDERS]`, and iterate. New to all of this? Start with the no-code
 guide: [docs/FOR-NON-TECHNICAL-FOUNDERS.md](docs/FOR-NON-TECHNICAL-FOUNDERS.md).

@@ -53,16 +53,22 @@ echo "Checking version coherence (manifests + CITATION.cff)..."
 if command -v python3 >/dev/null 2>&1; then
   pkg_v="$(python3 -c "import json; print(json.load(open('package.json'))['version'])" 2>/dev/null)"
   cl_v="$(python3 -c "import json; print(json.load(open('.claude-plugin/plugin.json'))['version'])" 2>/dev/null)"
-  mk_v="$(python3 -c "import json; print(json.load(open('.claude-plugin/marketplace.json'))['plugins'][0]['version'])" 2>/dev/null)"
+  mkm_v="$(python3 -c "import json; print(json.load(open('.claude-plugin/marketplace.json'))['metadata']['version'])" 2>/dev/null)"
+  mkp_v="$(python3 -c "import json; print(json.load(open('.claude-plugin/marketplace.json'))['plugins'][0]['version'])" 2>/dev/null)"
   cx_v="$(python3 -c "import json; print(json.load(open('.codex-plugin/plugin.json'))['version'])" 2>/dev/null)"
   cff_v="$(awk -F'"' '/^version:/{print $2; exit}' CITATION.cff)"
-  for pair in ".claude-plugin/plugin.json:$cl_v" ".claude-plugin/marketplace.json:$mk_v" ".codex-plugin/plugin.json:$cx_v" "CITATION.cff:$cff_v"; do
+  for pair in ".claude-plugin/plugin.json:$cl_v" "marketplace.json(metadata):$mkm_v" "marketplace.json(plugin):$mkp_v" ".codex-plugin/plugin.json:$cx_v" "CITATION.cff:$cff_v"; do
     f="${pair%%:*}"; v="${pair#*:}"
     if [ "$v" != "$pkg_v" ]; then
       echo "  x $f version '$v' != package.json '$pkg_v'"; fail=1
     fi
   done
   [ "$fail" -eq 0 ] && echo "  ok all manifests + CITATION.cff at $pkg_v"
+fi
+
+echo "Checking British spelling (prose)..."
+if command -v python3 >/dev/null 2>&1; then
+  python3 scripts/check-spelling.py || fail=1
 fi
 
 if [ "$fail" -eq 0 ]; then

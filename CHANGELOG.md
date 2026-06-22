@@ -13,6 +13,24 @@ All notable changes to AI-Native OS are recorded here. The format follows
 - Translations of the Handbook and the non-coder prompts.
 - A demo recording of a skill running end to end.
 
+## [0.3.0] - 2026-06-22
+
+Cohesion, distribution, and a new safety skill. AI-Native OS and FounderOS now read as one product family.
+
+### Added
+
+- **New skill `secure-the-connectors`** (Trust): hardens the MCP and tool-supply-chain layer with a connector-risk register, a least-privilege scope map, and a human gate on destructive tools. Brings the library to 25 skills.
+- **One-command install** via `npx skills add impactbrussels/AINativeOS`, documented in the README and INSTALL.md alongside the installer and plugin paths.
+- **Release automation**: `.github/release.yml` plus a tag-triggered release workflow that cuts a GitHub release with categorised, auto-generated notes.
+- **British-spelling CI check** (`scripts/check-spelling.py`) wired into the linter, plus a manifest version-coherence check.
+- **A sibling cross-link** to FounderOS in the README, positioning the two as one product family.
+
+### Changed
+
+- **Flows now register as slash commands**: `plugin.json` points the commands loader at `flows/`.
+- **Supply-chain hardening**: all GitHub Actions pinned to commit SHAs, with Dependabot keeping the pins current weekly.
+- **Richer Codex and marketplace manifests** (interface block, brand colour, metadata), aligned with FounderOS.
+
 ## [0.2.0] - 2026-06-20
 
 The complete stack: every stage of the build arc is now covered, and every skill is a one-stop shop.
