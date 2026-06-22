@@ -6,11 +6,12 @@
 #
 # What it does:
 #   Copies every skills/<name>/ directory (including its references/ subfolder) into the
-#   skills folder your agent reads. It is safe to re-run: nothing is overwritten unless you
-#   pass --force or confirm at the prompt.
+#   skills folder your agent reads. Copy is the default, so the install keeps working even if
+#   you later move or delete the clone. Pass --link to symlink instead (edit-in-place, for
+#   contributors). Safe to re-run: nothing is overwritten unless you pass --force or confirm.
 #
 # Usage:
-#   ./install.sh [--platform claude|codex|gemini] [--user | --project <path>] [--force] [--list] [--help]
+#   ./install.sh [--platform claude|codex|gemini] [--user | --project <path>] [--link] [--force] [--list] [--help]
 #
 # Options:
 #   --platform <name>   Target agent. One of: claude (default), codex, gemini.
@@ -24,6 +25,8 @@
 #                         claude  -> <path>/.claude/skills
 #                         codex   -> <path>/.agents/skills
 #                         gemini  -> <path>/.gemini/skills
+#   --link              Symlink each skill instead of copying it, so edits in the repo are
+#                       picked up live. Best for contributors. The default is a safe copy.
 #   --force             Overwrite skills that already exist, without asking.
 #   --list              Show which skills would be installed, then exit (installs nothing).
 #   --help              Show this help and exit.
@@ -36,7 +39,7 @@
 #   - Authoritative docs: Claude skills https://code.claude.com/docs/en/skills
 #                         Gemini CLI     https://geminicli.com/docs/cli/
 
-set -eu
+set -euo pipefail
 
 # --- locate the repo (this script lives at the repo root) -------------------------------------
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -48,11 +51,12 @@ SCOPE="user"       # user | project
 PROJECT_PATH=""
 FORCE="no"
 LIST_ONLY="no"
+LINK="no"          # no = copy (default), yes = symlink
 
 # --- help text --------------------------------------------------------------------------------
 print_help() {
-  # Print the leading comment block (lines 2-37: from after the shebang to the end of the header).
-  sed -n '2,37p' "$0" | sed 's/^# \{0,1\}//'
+  # Print the leading comment block (lines 2-40: from after the shebang to the end of the header).
+  sed -n '2,40p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 # --- argument parsing -------------------------------------------------------------------------
@@ -79,6 +83,9 @@ while [ $# -gt 0 ]; do
       SCOPE="project"
       PROJECT_PATH="${1#*=}"
       ;;
+    --link)
+      LINK="yes"
+      ;;
     --force)
       FORCE="yes"
       ;;
@@ -96,6 +103,9 @@ while [ $# -gt 0 ]; do
   esac
   shift
 done
+
+# Human-readable mode for the plan summary.
+if [ "$LINK" = "yes" ]; then MODE="symlink"; else MODE="copy"; fi
 
 # --- validate platform and map it to a skills subdirectory ------------------------------------
 # Each platform reads SKILL.md from a different folder. These paths are the verified ones.
@@ -152,7 +162,7 @@ if [ "$LIST_ONLY" = "yes" ]; then
     echo "  - $name"
   done
   echo ""
-  echo "Target (platform=$PLATFORM, scope=$SCOPE): $DEST"
+  echo "Target (platform=$PLATFORM, scope=$SCOPE, mode=$MODE): $DEST"
   exit 0
 fi
 
@@ -160,6 +170,7 @@ fi
 echo "AI-Native OS installer"
 echo "  Platform : $PLATFORM"
 echo "  Scope    : $SCOPE"
+echo "  Mode     : $MODE"
 echo "  Source   : $SKILLS_SRC"
 echo "  Target   : $DEST"
 echo ""
@@ -167,7 +178,7 @@ echo ""
 # Create the destination if needed.
 mkdir -p "$DEST"
 
-# --- copy each skill, honouring --force and the overwrite prompt -------------------------------
+# --- copy (or symlink) each skill, honouring --force and the overwrite prompt ------------------
 INSTALLED=0
 SKIPPED=0
 
@@ -175,7 +186,7 @@ for name in $SKILLS; do
   src="$SKILLS_SRC/$name"
   target="$DEST/$name"
 
-  if [ -e "$target" ]; then
+  if [ -e "$target" ] || [ -L "$target" ]; then
     if [ "$FORCE" = "yes" ]; then
       : # fall through to overwrite
     else
@@ -197,13 +208,18 @@ for name in $SKILLS; do
         continue
       fi
     fi
-    # Remove the old copy so a stale references/ file cannot linger.
+    # Remove the old copy/link so a stale references/ file cannot linger.
     rm -rf "$target"
   fi
 
-  # Copy the whole skill directory, including references/.
-  cp -R "$src" "$target"
-  echo "    installed $name -> $target"
+  # Copy (default) or symlink (--link) the whole skill directory, including references/.
+  if [ "$LINK" = "yes" ]; then
+    ln -s "$src" "$target"
+    echo "    linked $name -> $target"
+  else
+    cp -R "$src" "$target"
+    echo "    installed $name -> $target"
+  fi
   INSTALLED=$((INSTALLED + 1))
 done
 

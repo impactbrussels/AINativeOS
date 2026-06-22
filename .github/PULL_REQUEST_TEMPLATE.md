@@ -23,3 +23,4 @@ Where and how you tested it. Which platform (Claude Code, Codex, Cursor, Gemini,
 - [ ] A copy-paste prompt is included for non-coders, with placeholders from the shared glossary.
 - [ ] [ROADMAP.md](../ROADMAP.md) updated (item moved from "next" to "shipped", or a new row added).
 - [ ] `license:` and `attribution:` frontmatter preserved.
+- [ ] **CLA** - I agree to the [Contributor License Agreement](../blob/main/CLA.md).

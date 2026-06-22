@@ -65,7 +65,7 @@ This raises the stakes on GEO precisely where GEO matters most. Your hardest-won
 
 ## The test
 
-Take your single boldest marketing claim, the one you most want an AI engine to quote, and ask: if my most sceptical buyer acted on this sentence today, would the product, the data, and the dossier behind it hold, or would they find the gap? If you cannot answer with proof you could put in front of a regulator, your narrative is outrunning your evidence, and the engine you taught to quote it will spread the gap faster than you can close it. The `geo-content` skill (Stage: Grow) is on the [ROADMAP](../ROADMAP.md) and not yet shipped. Until it lands, → Run `measure-ai-native-pmf` for the Share-of-Model baseline, because you cannot tell whether your narrative is landing until you have counted how often the engines name you versus your competitors.
+Take your single boldest marketing claim, the one you most want an AI engine to quote, and ask: if my most sceptical buyer acted on this sentence today, would the product, the data, and the dossier behind it hold, or would they find the gap? If you cannot answer with proof you could put in front of a regulator, your narrative is outrunning your evidence, and the engine you taught to quote it will spread the gap faster than you can close it. Run the [`geo-content`](../skills/geo-content/SKILL.md) skill (Stage: Grow) to make each claim extractable and sourced, then run [`measure-ai-native-pmf`](../skills/measure-ai-native-pmf/SKILL.md) for the Share-of-Model baseline, because you cannot tell whether your narrative is landing until you have counted how often the engines name you versus your competitors.
 
 ---
 

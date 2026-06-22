@@ -1,13 +1,29 @@
-# House style: one objective check, em-dashes only, so it has zero false positives.
-# The full voice rules (British spelling, banned words, no en-dashes in prose) live in
-# docs/VOICE-GUIDE.md and are reviewed by a human on every PR.
+# House style + structural lint for AI-Native OS. Two objective checks with zero false positives:
+#   1. lint: every skill has valid frontmatter (name == folder, description present), every JSON
+#      manifest parses, and the version stays in lockstep across manifests and CITATION.cff.
+#   2. no-em-dashes: no U+2014 in tracked Markdown. The full voice rules (British spelling, banned
+#      words, no en-dashes in prose) live in docs/VOICE-GUIDE.md and are reviewed by a human on PRs.
 name: House style
 
 on:
   push:
+    branches: [main]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
+  lint:
+    name: Validate skills & manifests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Run skill linter
+        run: bash scripts/lint-skills.sh
+
   no-em-dashes:
     name: No em-dashes in Markdown
     runs-on: ubuntu-latest

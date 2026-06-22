@@ -54,7 +54,7 @@ The second thing is sharper. Debt that blocks data collection blocks the moat di
 
 ## The test
 
-Name your system's top three debts, then write the interest rate of each in one line: does it block scaling, does it block data collection, or is it merely cosmetic. If your number-one debt turns out to be a broken feedback loop or a missing signal that nobody was complaining about, that is not a coincidence. That is the chapter working. The debt that screams is rarely the debt that kills you. The `pay-down-agentic-debt` skill is the runnable version of this drill, and it is on the [ROADMAP](../ROADMAP.md), not yet shipped. Until it ships, run `architect-before-code` to re-establish the System Inventory, because you cannot rank what is downstream of a change until you hold the map of what is downstream of what.
+Name your system's top three debts, then write the interest rate of each in one line: does it block scaling, does it block data collection, or is it merely cosmetic. If your number-one debt turns out to be a broken feedback loop or a missing signal that nobody was complaining about, that is not a coincidence. That is the chapter working. The debt that screams is rarely the debt that kills you. The [`pay-down-agentic-debt`](../skills/pay-down-agentic-debt/SKILL.md) skill is the runnable version of this drill: run it to rate each debt by its interest and schedule the paydown. Pair it with [`architect-before-code`](../skills/architect-before-code/SKILL.md) to re-establish the System Inventory, because you cannot rank what is downstream of a change until you hold the map of what is downstream of what.
 
 ---
 

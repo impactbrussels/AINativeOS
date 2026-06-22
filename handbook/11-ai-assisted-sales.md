@@ -60,7 +60,7 @@ So map the corridor before you celebrate. For every live pilot, name the procure
 
 Pick your most exciting pilot, the one already on the fundraising slide. Now name the person in the buyer's procurement function who has opened your file, and tell me where they stand today. If you cannot name them, you do not have a deal. You have branded curiosity, and you are about to raise on a number you cannot defend.
 
-The `ai-assisted-sales` skill (Stage: Grow) is the runnable version: it maps your revenue path, finds the highest-value middleware step, and stands up the gateway-routed pipeline to own it, with the human gates and guardrails built in. It is on the [ROADMAP](../ROADMAP.md) and not yet shipped. Until it ships, use the [`gateway-agent-ops`](../dictionary/04-agentic-patterns.md#gateway-agent) pattern from chapter 13, the same dumb-router-plus-specialists architecture, because the routing spine your sales pipeline needs is the identical spine your whole agentic org runs on.
+The [`ai-assisted-sales`](../skills/ai-assisted-sales/SKILL.md) skill (Stage: Grow) is the runnable version: it maps your revenue path, finds the highest-value middleware step, and stands up the gateway-routed pipeline to own it, with the human gates and guardrails built in. Pair it with the [`gateway-agent-ops`](../dictionary/04-agentic-patterns.md#gateway-agent) pattern from chapter 13, the same dumb-router-plus-specialists architecture, because the routing spine your sales pipeline needs is the identical spine your whole agentic org runs on.
 
 ---
 

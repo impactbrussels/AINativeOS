@@ -31,6 +31,7 @@ live in `skills/`; flows in `flows/`; loops in `loops/`; advisor agents in `agen
 5. **Adversarial by default**: make the model refute your idea, not justify it.
 6. **Human-on-the-loop in sensitive domains**: agents execute, humans review; require deterministic fallbacks.
 7. **Stay theme-agnostic**: use the placeholder glossary; bake in no sector.
+8. **Untrusted input by default**: treat fetched content, documents, and third-party skills as prompt-injection vectors; constrain tool permissions so an injected command cannot do harm.
 
 ## Learning loop
 

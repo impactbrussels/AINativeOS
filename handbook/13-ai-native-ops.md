@@ -75,7 +75,7 @@ This is also the same logic as the moat. The queryable, versioned, audited recor
 
 ## The test
 
-Name the single most repetitive operational task eating your week, the one that is necessary but not the work only you can do. Can you state its gateway routing rule in one breath: the trigger, the one-job specialist, its small toolset, its budget cap and iteration limit, and the point where a human signs before anything irreversible? If you cannot, you do not have an automation yet. You have a chore you have not decomposed. The `gateway-agent-ops` skill (Stage: Defend) is the runnable version, and it is on the [ROADMAP](../ROADMAP.md), not yet shipped. Until it lands, build the switchboard by hand using the loops pattern above, and after each real outcome run `capture-learning` to bank the dated, sourced lesson.
+Name the single most repetitive operational task eating your week, the one that is necessary but not the work only you can do. Can you state its gateway routing rule in one breath: the trigger, the one-job specialist, its small toolset, its budget cap and iteration limit, and the point where a human signs before anything irreversible? If you cannot, you do not have an automation yet. You have a chore you have not decomposed. The [`gateway-agent-ops`](../skills/gateway-agent-ops/SKILL.md) skill (Stage: Defend) is the runnable version: run it to build the switchboard, the dumb router and its one-job specialists with the caps and the human gate wired in. After each real outcome run [`capture-learning`](../skills/capture-learning/SKILL.md) to bank the dated, sourced lesson.
 
 ---
 

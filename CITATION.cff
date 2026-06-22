@@ -3,14 +3,14 @@ message: "If you use AI-Native OS, please cite it as below."
 title: "AI-Native OS: The open operating system for building an AI-native company"
 abstract: >-
   AI-Native OS is a theme-agnostic, open-source operating system for building companies where
-  intelligence sits at the core of the product and the org. It pairs a 14-chapter Handbook and a
+  intelligence sits at the core of the product and the org. It pairs a 15-chapter Handbook and a
   Dictionary of AI-native vocabulary with a runnable library of AI skills, multi-step flows,
   recurring loops, and advisor agents - covering the arc from framing a hypothesis to architecting
   the system, agentic building, evaluation and safety, shipping a Minimum Viable Agent, GEO-driven
   growth, and data moats - across Claude Code, Codex, Cursor, and Gemini CLI.
 type: software
-version: "0.1.0"
-date-released: "2026-06-19"
+version: "0.2.0"
+date-released: "2026-06-20"
 license:
   - Apache-2.0
   - CC-BY-4.0

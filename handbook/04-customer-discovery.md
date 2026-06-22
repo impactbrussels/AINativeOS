@@ -65,7 +65,7 @@ The temptation is sharper in these sectors because the real answer is slow and e
 
 ## The test
 
-Take your last round of interviews. Can you name three people whose actual behaviour, what they already do and already pay for, is strong evidence of funded demand? If you can only name people who said nice things, you have collected approval, not evidence, and you are about to build on it. The runnable [`customer-discovery-that-doesnt-lie`](../skills/) skill is on the **ROADMAP**, so for now run [`frame-the-hypothesis`](../skills/) to lock your falsifiable bet, then dispatch the [`devils-advocate`](../agents/) agent to tear the findings apart. Stage: **Frame**.
+Take your last round of interviews. Can you name three people whose actual behaviour, what they already do and already pay for, is strong evidence of funded demand? If you can only name people who said nice things, you have collected approval, not evidence, and you are about to build on it. Run [`customer-discovery-that-doesnt-lie`](../skills/customer-discovery-that-doesnt-lie/SKILL.md) to pull funded demand out of the transcripts, and [`frame-the-hypothesis`](../skills/frame-the-hypothesis/SKILL.md) to lock the falsifiable bet, then dispatch the [`devils-advocate`](../agents/devils-advocate.md) agent to tear the findings apart. Stage: **Frame**.
 
 ---
 

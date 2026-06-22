@@ -4,7 +4,7 @@
 
 The handbook of [AI-Native OS](../README.md), by Adam M. Adamek (Impact Brussels ASBL).
 
-The method, in depth: ~65,000 words on building a company where intelligence is the core, not the
+The method, in depth: ~33,800 words on building a company where intelligence is the core, not the
 garnish. Written for founders in hard-mode sectors (food, health, deeptech), including non-technical
 ones.
 

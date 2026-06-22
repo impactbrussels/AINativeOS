@@ -1,7 +1,7 @@
 {
   "name": "ai-native-os",
   "description": "The open operating system for building an AI-native company: a Handbook, a Dictionary, and AI skills, flows, loops, and advisor agents spanning the whole arc - frame, architect, build, trust, ship, grow, defend. Theme-agnostic.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Adam M. Adamek",
     "email": "hello@impact.brussels",
