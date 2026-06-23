@@ -33,8 +33,8 @@ endorsement in either direction.
 If AI-Native OS is useful to you, these are worth a look. Each is actively maintained and openly
 licensed at the time of writing.
 
-- **[FounderOS](https://github.com/impactbrussels/FounderOS)** by Adam M. Adamek (Impact Brussels ASBL).
-  The sibling to this repo. FounderOS walks a first-time founder through the whole startup arc; AI-Native
+- **[Founder OS](https://github.com/impactbrussels/FounderOS)** by Adam M. Adamek (Impact Brussels ASBL).
+  The sibling to this repo. Founder OS walks a first-time founder through the whole startup arc; AI-Native
   OS is the version for building a company where intelligence sits at the core. Start there if your
   question is "how do I found a startup" rather than "how do I make it AI-native".
 - **[startup-founder-skills](https://github.com/shawnpang/startup-founder-skills)** by Shawn Pang.

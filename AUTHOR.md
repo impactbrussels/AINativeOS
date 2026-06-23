@@ -21,7 +21,7 @@ lives (validate before you build, make the model refute you, put a human on the 
 on a person) arrive late, scattered, and behind paywalls. I'd rather encode them once, in the open,
 so the next founder starts a year ahead instead of from zero.
 
-AI-Native OS is a sibling to **[FounderOS](../FounderOS/)**: that one walks a first-time founder
+AI-Native OS is a sibling to **[Founder OS](../FounderOS/)**: that one walks a first-time founder
 through the startup journey; this one is for the founder building when the tools got powerful faster
 than the wisdom did.
 

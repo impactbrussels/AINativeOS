@@ -23,7 +23,7 @@ and 25 AI skills that take you from a vague idea to a company with a real data m
 ---
 
 > **Part of a family.** AI-Native OS has a sibling for the general founder journey:
-> [FounderOS](https://github.com/impactbrussels/FounderOS). Same author, same licence. Use FounderOS
+> [Founder OS](https://github.com/impactbrussels/FounderOS). Same author, same licence. Use Founder OS
 > for idea-to-operations; use AI-Native OS when your product itself is the AI.
 
 ## Why this exists
